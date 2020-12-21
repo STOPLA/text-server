@@ -3,6 +3,10 @@
     color: $black;
   }
 
+  .line {
+    stroke: $black !important;
+  }
+
   &__info {
     margin: 50px 0;
 
