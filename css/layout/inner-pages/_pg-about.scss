@@ -1,0 +1,208 @@
+.pg__about {
+  nav {
+    h2 {
+      color: $black;
+    }
+    .line {
+      stroke: $black !important;
+    }
+  }
+
+  &__hero {
+    display: flex;
+    min-height: 700px;
+    flex-direction: column-reverse;
+
+    @include respond(sm) {
+      flex-direction: row;
+    }
+
+    &__bg-img {
+      background-image: url(../../../assets/images/about-pg/hero-bgg.jpg);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: cover;
+
+      height: 500px;
+
+      @include respond(sm) {
+        width: 50%;
+        height: auto;
+      }
+    }
+
+    &__text {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 80px 20px;
+
+      @include respond(sm) {
+        margin-left: 80px;
+        width: 50%;
+      }
+
+      .heading {
+        font-size: 30px;
+
+        @include respond(sm) {
+          font-size: 56px;
+        }
+      }
+      .text {
+        margin-bottom: 40px;
+
+        @include respond(sm) {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  &__counter {
+    text-align: center;
+    color: $white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 60px 0;
+      flex-direction: column;
+
+      @include respond(sm) {
+        flex-direction: row;
+      }
+    }
+
+    &__icon {
+      margin-bottom: 15px;
+      background-color: #278060;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      position: relative;
+      ion-icon {
+        @include center;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &__number {
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    &__name {
+      // font-size: 20px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+    }
+  }
+
+  &__about {
+    display: flex;
+    padding: 150px 0;
+    align-items: center;
+    flex-direction: column;
+
+    @include respond(sm) {
+      flex-direction: row;
+    }
+
+    & > div {
+      flex-basis: 100%;
+      flex: 1 1 0;
+    }
+
+    &__info {
+      margin-right: 0;
+      margin-bottom: 20px;
+
+      @include respond(sm) {
+        margin: 0;
+        margin-right: 40px;
+      }
+    }
+    &__quote {
+      border-left: 6px solid #339b76;
+      background-color: #ecf9f4;
+      padding: 40px 20px;
+
+      .text {
+        font-size: 22px;
+        font-weight: 500;
+        color: $black;
+
+        &--bold {
+          font-weight: 700;
+          margin-bottom: 0;
+        }
+
+        &--green {
+          color: #278060;
+          margin-bottom: 0;
+        }
+      }
+
+      &__img {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 80px;
+          border-radius: 50%;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  &__features {
+    padding: 100px 0;
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      ion-icon {
+        color: #339b76;
+        font-size: 30px;
+        position: relative;
+        top: 7px;
+      }
+
+      .text {
+        width: 50%;
+      }
+    }
+
+    &__cards {
+      display: flex;
+      text-align: center;
+      &__card {
+        padding: 0 20px;
+        ion-icon {
+          font-size: 100px;
+          color: #339b76;
+        }
+
+        .text--bold {
+          font-size: 22px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
