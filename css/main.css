@@ -1247,8 +1247,8 @@ nav .list li .drop-down-menu li {
 }
 
 .pg__product__links__customer {
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(243, 156, 18, 0.7))), url(../../assets/images/products-pg/customer.jpg);
-  background-image: linear-gradient(to left, rgba(243, 156, 18, 0.7)), url(../../assets/images/products-pg/customer.jpg);
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(243, 156, 18, 0.7))), url(../assets/images/products-pg/customer.jpg);
+  background-image: linear-gradient(to left, rgba(243, 156, 18, 0.7)), url(../assets/images/products-pg/customer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1266,8 +1266,8 @@ nav .list li .drop-down-menu li {
 }
 
 .pg__product__links__farmer {
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(39, 174, 96, 0.7))), url(../../assets/images/products-pg/farmer.jpg);
-  background-image: linear-gradient(to left, rgba(39, 174, 96, 0.7)), url(../../assets/images/products-pg/farmer.jpg);
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(39, 174, 96, 0.7))), url(../assets/images/products-pg/farmer.jpg);
+  background-image: linear-gradient(to left, rgba(39, 174, 96, 0.7)), url(../assets/images/products-pg/farmer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
