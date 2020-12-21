@@ -1,0 +1,30 @@
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 0;
+  flex-direction: column;
+
+  @include respond(sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__bold {
+    font-weight: 900;
+    font-size: 22px;
+    color: $black;
+  }
+
+  & > div {
+    margin-bottom: 30px;
+
+    & .title {
+      color: $grey;
+    }
+
+    @include respond(sm) {
+      margin-bottom: 0;
+    }
+  }
+}
