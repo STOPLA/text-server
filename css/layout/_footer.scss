@@ -1,0 +1,19 @@
+.footer {
+  padding-top: 100px;
+  padding-bottom: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include respond(sm) {
+    flex-direction: row;
+  }
+
+  & > div {
+    margin-bottom: 30px;
+    @include respond(sm) {
+      margin-bottom: 0;
+    }
+  }
+}

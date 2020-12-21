@@ -1,0 +1,23 @@
+.banner__bg--full {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../assets/images/banner_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+  flex-direction: column;
+
+  @include respond(sm) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
