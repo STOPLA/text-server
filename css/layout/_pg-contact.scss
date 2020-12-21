@@ -23,7 +23,7 @@
 
   @include respond(sm) {
     padding: 50px 40px;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   & .input__wrapper {
