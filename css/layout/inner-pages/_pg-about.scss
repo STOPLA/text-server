@@ -1,4 +1,5 @@
 .pg__about {
+  // nav section styles
   nav {
     h2 {
       color: $black;
@@ -7,6 +8,8 @@
       stroke: $black !important;
     }
   }
+
+  // hero section styles
 
   &__hero {
     display: flex;
@@ -60,22 +63,33 @@
     }
   }
 
+  // counter section styles
+
   &__counter {
     text-align: center;
     color: $white;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
 
     &__wrapper {
       display: flex;
       justify-content: space-around;
-      align-items: center;
+      align-items: flex-start;
       padding: 60px 0;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
 
-      @include respond(sm) {
+      & > div {
+        flex: 0 0 40%;
+
+        @include respond(md) {
+          flex: auto;
+        }
+      }
+
+      @include respond(xs) {
         flex-direction: row;
       }
     }
@@ -100,13 +114,14 @@
     }
 
     &__name {
-      // font-size: 20px;
       letter-spacing: 2px;
       font-weight: 700;
       color: $white;
       text-transform: uppercase;
     }
   }
+
+  // About section styles
 
   &__about {
     display: flex;
@@ -166,6 +181,8 @@
     }
   }
 
+  // Features section styles
+
   &__features {
     padding: 100px 0;
 
@@ -183,13 +200,33 @@
       }
 
       .text {
-        width: 50%;
+        width: 100%;
+        @include respond(sm) {
+          width: 50%;
+        }
       }
     }
 
     &__cards {
       display: flex;
       text-align: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      flex-direction: column;
+
+      @include respond(xs) {
+        flex-direction: row;
+      }
+
+      & > div {
+        flex: 0 0 50%;
+
+        @include respond(md) {
+          flex: 1;
+        }
+      }
+
       &__card {
         padding: 0 20px;
         ion-icon {
@@ -202,6 +239,209 @@
           font-weight: bold;
           margin-bottom: 10px;
         }
+      }
+    }
+  }
+
+  // process section styles
+
+  &__process {
+    padding: 100px 0;
+
+    &__title {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      margin-bottom: 50px;
+      flex-direction: column;
+      @include respond(sm) {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .text {
+        width: 100%;
+
+        @include respond(sm) {
+          width: 60%;
+        }
+      }
+    }
+
+    &__steps {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: column;
+      margin: -10px;
+
+      @include respond(md) {
+        flex-direction: row;
+      }
+
+      &__card {
+        flex: 1 1 0;
+        margin: 10px;
+        text-align: center;
+
+        &__bg {
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          height: 350px;
+          border-radius: 3px;
+
+          &.bg-1 {
+            background-image: url(../../../assets/images/about-pg/process-1.jpg);
+          }
+          &.bg-2 {
+            background-image: url(../../../assets/images/about-pg/process-2.jpg);
+          }
+          &.bg-3 {
+            background-image: url(../../../assets/images/about-pg/process-3.jpg);
+          }
+        }
+
+        &__number {
+          background-color: #ecf9f4;
+          width: 75px;
+          height: 75px;
+          position: relative;
+          margin: 20px auto;
+          border-radius: 50%;
+
+          & span {
+            color: #339b76;
+            font-size: 27px;
+            line-height: 1.333em;
+            font-weight: 700;
+            @include center;
+          }
+        }
+
+        &__heading {
+          font-size: 22px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  // team section styles
+
+  &__team {
+    padding: 100px 0;
+
+    &__title {
+      text-align: center;
+      margin-bottom: 30px;
+      .text {
+        width: 100%;
+        margin: 0 auto;
+
+        @include respond(sm) {
+          width: 60%;
+        }
+      }
+    }
+
+    &__button {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    &__members {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      flex-direction: column;
+
+      @include respond(sm) {
+        flex-direction: row;
+        margin: -10px;
+      }
+
+      &__card {
+        flex: 1 1 0;
+        margin: 10px 0;
+        width: 100%;
+
+        @include respond(sm) {
+          margin: 10px;
+        }
+
+        figure {
+          position: relative;
+          img {
+            width: 100%;
+
+            @include respond(sm) {
+              height: auto;
+            }
+          }
+        }
+
+        &__details {
+          @include center;
+          top: 80%;
+          width: 70%;
+          text-align: center;
+          background-color: #fff;
+          padding: 20px 0;
+
+          .text {
+            margin-bottom: 0;
+            line-height: 1.5;
+          }
+
+          .text--name {
+            font-weight: 700;
+            font-size: 18px;
+            color: $black;
+          }
+
+          .text--job {
+            color: #339b76;
+            font-weight: 600;
+          }
+
+          .links {
+            margin-top: 10px;
+            ion-icon {
+              margin-right: 10px;
+              font-size: 26px;
+              color: #339b76;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Instagram section styles
+
+  &__insta {
+    padding: 100px 0;
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 50px;
+
+      @include respond(sm) {
+        align-items: center;
+        flex-direction: row;
+      }
+    }
+    &__gallery {
+      display: flex;
+      overflow: hidden;
+
+      img {
+        max-width: 300px;
+        width: 100%;
       }
     }
   }
